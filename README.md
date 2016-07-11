@@ -63,11 +63,11 @@ mvn package
 Now we should be all set! Run the application using the `java -jar` command.
 
 ```bash
-java -jar target/ipm-quickstart-1.0-SNAPSHOT.jar
+java -jar target/sync-quickstart-1.0-SNAPSHOT.jar
 ```
 
 Your application should now be running at [http://localhost:4567](http://localhost:4567). 
-Open this page in a couple browsers or tabs, and start chatting!
+Open this page in a couple browsers or tabs, and start playing!
 
 ![screenshot of sync app](tic-tac-twilio.png)
 
