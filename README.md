@@ -1,15 +1,27 @@
-# IP Messaging Quickstart for Java
+# Sync Quickstart for Java
 
 This application should give you a ready-made starting point for writing your
-own messaging apps with Twilio IP Messaging. Before we begin, we need to collect
+own real-time apps with Sync. Before we begin, we need to collect
 all the config values we need to run the application:
 
-| Config Value  | Description |
+| Config Values  | Description |
 | :-------------  |:------------- |
-Service Instance SID | Like a database for your IP Messaging data - [generate one in the console here](https://www.twilio.com/user/account/ip-messaging/services)
-Account SID | Your primary Twilio account identifier - find this [in the console here](https://www.twilio.com/user/account/ip-messaging/getting-started).
-API Key | Used to authenticate - [generate one here](https://www.twilio.com/user/account/ip-messaging/dev-tools/api-keys).
-API Secret | Used to authenticate - [just like the above, you'll get one here](https://www.twilio.com/user/account/ip-messaging/dev-tools/api-keys).
+Service Instance SID | A [service](https://www.twilio.com/docs/api/sync/rest/services) instance where all the data for our application is stored and scoped. Generate one using the command below.
+Account SID | Your primary Twilio account identifier - find this [in the console here](https://www.twilio.com/console).
+API Key | Used to authenticate - [generate one here in the console](https://www.twilio.com/console/dev-tools/api-keys).
+API Secret | Used to authenticate - [just like the above, you can use the console to generate one here](https://www.twilio.com/console/dev-tools/api-keys).
+
+## Temporary: Generating a Service Instance
+
+During the Sync developer preview, you will need to generate Sync service
+instances via API until the Console GUI is available. Using the API key pair you
+generated above, generate a service instance via REST API with this command:
+
+```bash
+curl -X POST https://preview.twilio.com/Sync/Services \
+ -d 'FriendlyName=MySyncServiceInstance' \
+ -u 'SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:your_api_secret'
+```
 
 ## A Note on API Keys
 
@@ -57,7 +69,7 @@ java -jar target/ipm-quickstart-1.0-SNAPSHOT.jar
 Your application should now be running at [http://localhost:4567](http://localhost:4567). 
 Open this page in a couple browsers or tabs, and start chatting!
 
-![screenshot of chat app](https://s3.amazonaws.com/howtodocs/quickstart/ipm-browser-quickstart.png)
+![screenshot of sync app](tic-tac-twilio.png)
 
 ## License
 
