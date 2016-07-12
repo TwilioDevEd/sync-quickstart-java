@@ -23,6 +23,10 @@ local.properties
 .settings/
 .loadpath
 
+# Netbeans
+nb-configuration.xml
+nbactions.xml
+
 # Eclipse Core
 .project
 
