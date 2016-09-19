@@ -28,11 +28,16 @@
 			<artifactId>javafaker</artifactId>
 			<version>0.2</version>
 		</dependency>
-<dependency>
-    <groupId>io.jsonwebtoken</groupId>
-    <artifactId>jjwt</artifactId>
-    <version>0.2</version>
-</dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.twilio.sdk</groupId>
+            <artifactId>twilio</artifactId>
+            <version>7.0.0-rc-25</version>
+        </dependency>
     </dependencies>
     
     <build>
