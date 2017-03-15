@@ -24,14 +24,9 @@ public class Webapp {
     get("/token", "application/json", (request, response) -> {
       // Generate a random username for the connecting client
       String identity = faker.firstName() + faker.lastName() + faker.zipCode();
-      
-      // Create an endpoint ID which uniquely identifies the user on their current device
-      String appName = "TwilioSyncDemo";
-      String endpointId = appName + ":" + identity + ":" + request.params("device");
-      
+
       // Create IP messaging grant
       SyncGrant grant = new SyncGrant();
-      grant.setEndpointId(endpointId);
       grant.setServiceSid(System.getenv("TWILIO_SYNC_SERVICE_SID"));
       
       // Create access token
